@@ -43,8 +43,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/Home-DD.PNG" width="375px" alt="Home pagina van de Dunkin Donuts website">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Bestel pagina  
-  <img src="readme-images/Order-DD.PNG" width="375px" alt="Bestel pagina van de Dunkin Donuts website">
+  Jobs pagina  
+  <img src="readme-images/Jobs-DD.jpeg" width="375px" alt="Bestel pagina van de Dunkin Donuts website">
  
 </details>
 
@@ -57,7 +57,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
-
+ Over het algemeen ziet de website er goed uit, maar er zaten wel een paar errors in de HTML.
+ Met de screenreader las het niet alles voor hoe het bedoelt was.
 </details>
 
 
@@ -68,13 +69,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/BD-Home.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/BD-Home-2.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/BD-Home-3.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
