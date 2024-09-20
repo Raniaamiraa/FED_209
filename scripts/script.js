@@ -1,12 +1,13 @@
 // JavaScript Document
 console.log("hi");
 
-//onderstaande code (nav) heb ik van chat gpt en heb ik aangepast naar mijn website 
-//document.getElementById('menu-btn').addEventListener('click', function() {
- //   const navMenu = document.getElementById('nav-menu');
-  //  const isExpanded = this.getAttribute('aria-expanded') === 'true';
+const menuButton = document.querySelector('button[aria-label="menu"]');
+const navMenu = document.getElementById('nav-menu');
 
- //   navMenu.classList.toggle('show');
-  //  this.setAttribute('aria-expanded', !isExpanded);
-//});
+menuButton.addEventListener('click', function() {
+    const expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+    menuButton.setAttribute('aria-expanded', !expanded); // Toggle aria-expanded attribute
+    navMenu.classList.toggle('active'); // Toggle de 'active' class op de <ul>
+});
+
 

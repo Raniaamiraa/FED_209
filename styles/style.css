@@ -18,7 +18,10 @@
 :root {
 	/* startje */
 	--color-text: #111;
+	--color-text2: #fff;
 	--color-background: #eee;
+	--color-first: #FF6E0D;
+	--color-second: #F20D90;
 }
 
 
@@ -30,85 +33,91 @@
 /****************/
 
 /* jouw code */
-body {
-	font-family: "Dunkin Sans Display";
+
+@font-face {
+	font-family: 'Dunkin Sans';
+	src: url('../Fonts/Dunkin-Sans-Display.woff2') format('wolff2'),
 }
 
-/*onderstaande code (nav) heb ik van chat gpt en heb ik aangepast naar mijn website
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 4em;
+	max-width: auto;
 }
 
-.logo {
-	max-width: 100%;
-	height: 28.1094px;
-
+.logo{
+align-items: center;
 }
 
-/* Hamburger button styling 
-.menu-toggle {
-	font-size: 3rem;
-	background: none;
-	border: none;
-	color: magenta;
-	cursor: pointer;
-	display: none;
+.logo-foto{
+	max-width: 10em;
 }
 
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	border: 0;
+body {
+	font-family: "Dunkin Sans";
 }
 
-/* Menu styling 
+.header-keur {
+	background-color: var(--color-first);
+	color: var(--color);
+}
+
+.taal {
+	padding: 0.5em;
+	background-color: var(--color-background);
+	border-radius: 30%;
+}
+
+/* chat hulp */
 .nav-menu {
-	list-style: none;
-	display: flex;
-	margin: 0;
+	display: none;
+	/* Verberg het menu standaard */
+	list-style-type: none;
+	/* Verwijder bullet points */
 	padding: 0;
+	/* Verwijder padding */
 }
 
-.nav-menu li {
-	margin-left: 20px;
+.nav-menu.active {
+	display: block;
+	/* Toon het menu als het 'active' is */
 }
 
-.nav-menu li a {
-	text-decoration: none;
-	color: rgb(0, 0, 0);
-	font-size: 1rem;
+button[aria-label="menu"] {
+	background: #F0F0F0;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 30%;
+	padding-right: 2em;
+	padding-left: 2em;
+	padding-bottom: 0.8em;
+	padding-top: 0.8em;
+	width: fit-content;
+
 }
 
-/* Verberg het menu en toon de hamburger button op kleinere schermen 
-@media (max-width: 768px) {
-	.menu-toggle {
-		display: block;
-	}
+section:nth-of-type(1) {
+	position: relative; /* Zorg ervoor dat de h1 binnen deze sectie positioneert */
+  }
+  
+  section:nth-of-type(1) img {
+	display: block;
+	width: 100%; /* De breedte van de afbeelding */
+	height: auto; /* Houdt de verhoudingen van de afbeelding */
+	border-radius: 18px;
 
-	.nav-menu {
-		display: none;
-		flex-direction: column;
-		width: 100%;
-		position: absolute;
-		top: 50px;
-		left: 0;
-		background-color: #ffffff;
-		padding: 10px 0;
-	}
+  }
+  
+  section:nth-of-type(1) h1 {
+	position: absolute; /* Plaats de h1 over de afbeelding */
+	top: 20%; /* Verticaal in het midden */
+	left: 50%; /* Horizontaal in het midden */
+	transform: translate(-50%, -50%); /* Zorg voor exacte centrering */
+	color: white; /* Tekstkleur voor leesbaarheid */
+	font-size: 3rem; /* Tekstgrootte aanpassen */
+	z-index: 10; /* Zorg dat de tekst boven de afbeelding ligt */
+	text-align: center;
 
-	.nav-menu li {
-		text-align: center;
-		margin: 10px 0;
-	}
-
-	.nav-menu.show {
-		display: flex;
-	}
-}
+  }

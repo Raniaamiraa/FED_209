@@ -18,20 +18,38 @@
 <body>
 
 	<header>
-		<p>Dunkin' is op zoek naar jou! Bekijk onze <a href="https://werkenbijdunkin.store/vacatures">vacatures</a></p>
+		<p class="header-keur">Dunkin' is op zoek naar jou! Bekijk onze <a
+				href="https://werkenbijdunkin.store/vacatures">vacatures</a></p>
 
 
 
-		<!-- onderstaande code (nav) heb ik van chat gpt en heb ik aangepast naar mijn website 
+		<!-- deel van de onderstaande code (nav) heb ik van chat gpt en heb ik aangepast naar mijn website -->
 		<nav aria-label="Hoofdnavigatie" class="navbar">
-			<img src="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/612741c59719f3059ace4754_Language_Dutch.svg"
+			<img class="taal"
+				src="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/612741c59719f3059ace4754_Language_Dutch.svg"
 				alt="Nederlandse vlag om de taal de kiezen.">
-			<a href="#" class="logo"><img src="images/Logo.png" alt="Dunkin' Donuts logo"></a>
-			 Semantisch correct: gebruik button voor interactief element 
-			<button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" id="menu-btn">
-				<span class="visually-hidden">Menu openen/sluiten</span> &#9776;
+			<a href="#" class="logo"><img class="logo-foto"
+					src="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/612741c59719f3752cce4769_Primary_Logo%C2%AE_HEX.svg"
+					alt="Dunkin' Donuts logo"></a>
+
+			<button aria-label="menu" aria-expanded="false">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="18" height="18" aria-hidden="true">
+					<defs>
+						<style>
+							.burger {
+								fill: #000;
+							}
+						</style>
+					</defs>
+					<g id="burger">
+						<rect class="burger" y="2" width="40" height="7" />
+						<rect class="burger" y="16.5" width="40" height="7" />
+						<rect class="burger" y="31" width="40" height="7" />
+					</g>
+
+				</svg>
 			</button>
-			 Gebruik een nav element en zorg voor correcte ARIA-attributen 
+
 			<ul class="nav-menu" id="nav-menu">
 				<li><a href="#">Storefinder</a></li>
 				<li><a href="Jobs.html">Jobs</a></li>
@@ -39,8 +57,9 @@
 				<li><a href="#">More ></a></li>
 				<li><a href="#">Bestellen</a></li>
 			</ul>
-		</nav> -->
+		</nav>
 	</header>
+
 
 
 	<main>
