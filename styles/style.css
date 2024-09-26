@@ -464,17 +464,16 @@ footer {
   }
   
   footer img {
-	background-color: var(--color-background);
-	box-shadow: 0px 4px 8px var(--color-text);
+	background-color: var(--color-background2);
+	box-shadow: 0px 4px 4px var(--color-nav-line);
 	border-radius: 50%;
 	width: 12em;
 	height: 12em;
 	position: absolute; 
-	top: -10em; 
+	top: -7em; 
 	left: 50%; 
-	transform: translateX(-50%); 
+	transform: translateX(-50%) rotate(-20deg); 
 	z-index: 1; 
-	rotate: -20deg;
   }
   
   footer a {
@@ -496,7 +495,6 @@ footer {
 	display: grid;
 	place-items: center;
   }
-
 
 
 
