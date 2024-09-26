@@ -11,7 +11,6 @@
 
 
 
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -19,9 +18,19 @@
 	/* startje */
 	--color-text: #111;
 	--color-text2: #fff;
-	--color-background: #eee;
+	--color-text3: #aaaaaa;
+	--color-background: #fff;
+	--color-background2: #F5F5F5;
+	--color-nav-button: #F0F0F0;
+	--color-nav-line: #333333;
 	--color-first: #FF6E0D;
 	--color-second: #F20D90;
+	--color-third: #99D6E9;
+	--color-fourth: #f950ad;
+	--color-fifth:#EF4D27;
+	--link-kleur: #0272CD;
+	--kop-tekst-font: 'Dunkin Sans';
+	--tekst-font: 'Dunkin Sans Book';
 }
 
 
@@ -36,37 +45,68 @@
 
 @font-face {
 	font-family: 'Dunkin Sans';
-	src: url('../Fonts/Dunkin-Sans-Display.woff2') format('wolff2'),
+	src: url('../Fonts/Dunkin-Sans-Display.woff2') format('woff2');
 }
+
+@font-face {
+	font-family: 'Dunkin Sans Book';
+	src: url('../Fonts/Dunkin-Sans-Book.woff2') format('woff2');
+}
+
+body {
+	font-family: 'Dunkin Sans Book';
+	overflow-x: hidden;
+	margin: 0;
+}
+
+
+/* Homepage */
+
+main {
+	padding-left: 1.5em;
+}
+
 
 .navbar {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 4em;
-	max-width: auto;
+	grid-gap: 3em;
+	align-items: center;
+
 }
 
-.logo{
-align-items: center;
+.logo {
+	align-items: center;
 }
 
-.logo-foto{
+.logo-foto {
 	max-width: 10em;
 }
 
-body {
-	font-family: "Dunkin Sans";
-}
 
 .header-keur {
+
 	background-color: var(--color-first);
-	color: var(--color);
+	color: var(--color-text2);
+	width: 100vw;
+	text-align: center;
+	padding: 1em;
+	font-size: 11pt;
+	text-decoration-color: var(--link-kleur);
+	margin-top: 0;
+	margin-left: 0;
+	font-size: 0.9em;
 }
 
 .taal {
-	padding: 0.5em;
-	background-color: var(--color-background);
-	border-radius: 30%;
+	background-color: var(--color-nav-button);
+	scale: 1.3;
+	border-radius: 10px;
+	padding-right: 0.6em;
+	padding-left: 0.6em;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	margin-left: 2em;
 }
 
 /* chat hulp */
@@ -85,39 +125,379 @@ body {
 }
 
 button[aria-label="menu"] {
-	background: #F0F0F0;
+	background: var(--color-nav-button);
 	border: none;
 	cursor: pointer;
 	outline: none;
-	border-radius: 30%;
+	border-radius: 30px;
 	padding-right: 2em;
 	padding-left: 2em;
 	padding-bottom: 0.8em;
 	padding-top: 0.8em;
 	width: fit-content;
+}
+
+.Home {
+	position: relative;
+	/* Zorg ervoor dat de h1 binnen deze sectie positioneert */
+	width: 24em;
+	margin-top: 2.5em;
+	height: 30em
+}
+
+.Home img {
+	display: block;
+	width: 100%;
+	/* De breedte van de afbeelding */
+	height: auto;
+	/* Houdt de verhoudingen van de afbeelding */
+	border-radius: 18px;
 
 }
 
-section:nth-of-type(1) {
-	position: relative; /* Zorg ervoor dat de h1 binnen deze sectie positioneert */
-  }
-  
-  section:nth-of-type(1) img {
-	display: block;
-	width: 100%; /* De breedte van de afbeelding */
-	height: auto; /* Houdt de verhoudingen van de afbeelding */
-	border-radius: 18px;
-
-  }
-  
-  section:nth-of-type(1) h1 {
-	position: absolute; /* Plaats de h1 over de afbeelding */
-	top: 20%; /* Verticaal in het midden */
-	left: 50%; /* Horizontaal in het midden */
-	transform: translate(-50%, -50%); /* Zorg voor exacte centrering */
-	color: white; /* Tekstkleur voor leesbaarheid */
-	font-size: 3rem; /* Tekstgrootte aanpassen */
-	z-index: 10; /* Zorg dat de tekst boven de afbeelding ligt */
+.Home h1 {
+	font-family: var(--kop-tekst-font);
+	position: absolute;
+	top: 10%;
+	/* Verticaal in het midden */
+	left: 50%;
+	/* Horizontaal in het midden */
+	transform: translate(-50%, -50%);
+	/* Zorg voor exacte centrering */
+	color: var(--color-text2);
+	/* Tekstkleur voor leesbaarheid */
+	font-size: 3.5rem;
+	/* Tekstgrootte aanpassen */
+	z-index: 10;
+	/* Zorg dat de tekst boven de afbeelding ligt */
 	text-align: center;
+	text-transform: uppercase;
+	line-height: 1em;
+}
 
+.Home h1 span {
+	white-space: nowrap;
+}
+
+.Bestel {
+	background-color: var(--color-second);
+	border-radius: 18px;
+	color: var(--color-text2);
+	width: 24em;
+
+}
+
+.Bestel h2 {
+	font-family: var(--kop-tekst-font);
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 3.5em;
+	margin-bottom: 0;
+	padding-top: .3em;
+}
+
+.Bestel p {
+	padding-left: 1.5em;
+}
+
+.Bestel button {
+	font-family: var(--kop-tekst-font);
+	text-transform: uppercase;
+	padding: 1em 2.5em;
+	border-radius: 8px;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 2em;
+	margin-left: 1em;
+	margin-right: 0;
+}
+
+.Bestel button:nth-last-of-type(2) {
+	background-color: var(--color-background);
+	color: var(--color-second);
+}
+
+.Bestel button:nth-last-of-type(1) {
+	background-color: var(--color-fourth);
+	color: white;
+}
+
+
+.Nieuw img {
+	display: block;
+	width: 100%;
+	height: 31em;
+	object-fit: cover;
+}
+
+.Nieuw h2 {
+	font-size: 3.5rem;
+	margin-bottom: 0;
+	margin-top: 1em;
+}
+
+.Nieuw {
+	font-family: var(--kop-tekst-font);
+	background-color: var(--color-third);
+	border-radius: 18px;
+	text-align: center;
+	color: var(--color-text2);
+	text-transform: uppercase;
+	width: 24em;
+	height: 25em;
+	margin-bottom: 2em;
+}
+
+.Bestel-online h2 {
+	font-family: var(--kop-tekst-font);
+	text-transform: uppercase;
+	font-size: 4.2em;
+	margin: 0;
+}
+
+.Bestel-online h3 {
+	font-family: var(--kop-tekst-font);
+	text-transform: uppercase;
+	color: var(--color-second);
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+
+.Bestel-online h2:nth-last-of-type(odd) {
+	color: var(--color-second);
+}
+
+.Bestel-online h2:nth-last-of-type(even) {
+	color: var(--color-first);
+}
+
+.Bestel-online {
+	background-color: var(--color-background2);
+}
+
+.Bestel-online article {
+
+	border-radius: 16px;
+	background-color: var(--color-background);
+	margin: 1em;
+}
+
+.Bestel-online img {
+	width: 4em;
+	border-radius: 50%;
+	padding: 1em;
+}
+
+.stap1 img {
+	background-color: var(--color-second);
+}
+
+.stap2 img {
+	background-color: var(--color-first);
+}
+
+.stap3 img {
+	background-color: var(--color-second);
+}
+
+.stap1 {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-gap: 1.45em;
+	align-items: end;
+	padding: 1em;
+	width: 23em;
+
+}
+
+.stap1 p {
+	grid-column-start: 2;
+	grid-column-end: -1;
+	color: var(--color-text3);
+	margin-top: 0;
+	font-size: 0.9em;
+}
+
+.stap2 {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-gap: 1.45em;
+	align-items: end;
+	padding: 1em;
+	width: 23em;
+
+}
+
+.stap2 p {
+	grid-column-start: 2;
+	grid-column-end: -1;
+	color: var(--color-text3);
+	margin-top: 0;
+	font-size: 0.9em;
+}
+
+.stap3 {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-gap: 1.45em;
+	align-items: end;
+	padding: 1em;
+	width: 23em;
+
+
+}
+
+.order {
+	display: grid;
+	place-items: center;
+}
+
+.order-button {
+	font-family: var(--kop-tekst-font);
+	text-transform: uppercase;
+	background-color: var(--color-first);
+	color: var(--color-text2);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 30px;
+	font-size: 1em;
+	width: 24em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+
+}
+
+.Blog {
+	width: 24em;
+}
+
+.Blog img {
+	display: block;
+	width: 100%;
+	height: 20em;
+	object-fit: cover;
+}
+
+.Blog h2 {
+	font-family: var(--kop-tekst-font);
+	font-size: 2.5em;
+	color: var(--color-second);
+	margin-top: .3em;
+}
+
+.Blog p {
+	color: var(--color-text3);
+	font-size: 1.2em;
+}
+
+.lezen {
+	display: grid;
+	place-items: center;
+}
+
+.lezenLink {
+	font-family: var(--kop-tekst-font);
+	text-transform: uppercase;
+	background-color: var(--color-first);
+	color: var(--color-text2);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 30px;
+	font-size: 1em;
+	width: 24em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.Storefinder {
+	background-color: var(--color-second);
+	color: var(--color-text2);
+	border-radius: 20px;
+	text-align: center;
+	width: 24em;
+	height: 42em;
+	font-family: var(--kop-tekst-font);
+	text-transform: uppercase;
+	margin-bottom: 15em;
+}
+
+.Storefinder h2 {
+	font-size: 3.8em;
+	padding-top: .5em;
+	line-height: 1em;
+	margin-bottom: .5em;
+}
+
+.kaart {
+	width: 20em;
+	height: 20em;
+	object-fit: cover;
+	border-radius: 50%;
+	border: .6em solid var(--color-background);
+}
+
+.Storefinder p {
+	font-size: 2em;
+	line-height: .9em;
+}
+
+.store {
+	background-color: var(--color-background);
+	color: var(--color-second);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 30px;
+	font-size: .6em;
+	padding: 1em;
+	margin-bottom: 4em;
+}
+
+
+footer {
+	background-color: var(--color-first);
+	position: relative; 
+	text-align: center; 
+	padding-top: 6em;
+	padding-bottom: 2em;
   }
+  
+  footer img {
+	background-color: var(--color-background);
+	box-shadow: 0px 4px 8px var(--color-text);
+	border-radius: 50%;
+	width: 12em;
+	height: 12em;
+	position: absolute; 
+	top: -10em; 
+	left: 50%; 
+	transform: translateX(-50%); 
+	z-index: 1; 
+	rotate: -20deg;
+  }
+  
+  footer a {
+	font-family: var(--kop-tekst-font);
+	text-transform: uppercase;
+	background-color: var(--color-fifth);
+	color: var(--color-text2);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50px;
+	font-size: 1em;
+	width: 24em;
+	padding-top: 1.6em;
+	padding-bottom: 1.6em;
+	margin: .5em;
+  }
+  
+  .footerNav{
+	display: grid;
+	place-items: center;
+  }
+
+
+
+
+/* Jobspage */

@@ -23,7 +23,7 @@
 
 
 
-		<!-- deel van de onderstaande code (nav) heb ik van chat gpt en heb ik aangepast naar mijn website -->
+		<!-- deel van de onderstaande code (nav met het aria-label) heb ik van chat gpt en heb ik aangepast naar mijn website -->
 		<nav aria-label="Hoofdnavigatie" class="navbar">
 			<img class="taal"
 				src="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/612741c59719f3059ace4754_Language_Dutch.svg"
@@ -63,14 +63,14 @@
 
 
 	<main>
-		<section>
+		<section class="Home">
 			<h1>
-				We love coffee
+				<span>We love</span> coffee
 			</h1>
 			<img src="images/we-love-coffee.png" alt="Drie glazen koffie met veel melk en schuim">
 		</section>
 
-		<section>
+		<section class="Bestel">
 			<h2>
 				Bestel!
 			</h2>
@@ -79,7 +79,7 @@
 			<button>Afhalen</button>
 		</section>
 
-		<section>
+		<section class="Nieuw">
 			<h2>
 				Nieuw!
 			</h2>
@@ -87,25 +87,30 @@
 				alt="Meerdere donuts met een label waar 'gluten free' op staat. ">
 		</section>
 
-		<section>
+		<section class="Bestel-online">
 			<h2>
-				Bestel Dunkin' online
+				Bestel
 			</h2>
-			<article>
+			<h2>
+				Dunkin'
+			</h2>
+			<h2>
+				online
+			</h2>
+			<article class="stap1">
 
 				<img src="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/612741c59719f3e1e1ce482e_Group%20185.svg"
 					alt="Peace-hand icoontje">
 				<h3>
 					1. Vul je postcode in
 				</h3>
-				<p>Zoek jij een store in de buurt?</p>
-				<p>Gebruik de Dunkin' Storefinder.</p>
+				<p>Zoek jij een store in de buurt? Gebruik de Dunkin' Storefinder.</p>
 
 			</article>
 
-			<article>
+			<article class="stap2">
 
-				<img src="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/612741c59719f3e1e1ce482e_Group%20185.svg"
+				<img src="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/612741c59719f35eb9ce486e_Group%20773.svg"
 					alt="Peace-hand icoontje">
 				<h3>
 					2. PLaats je bestelling
@@ -115,7 +120,7 @@
 
 			</article>
 
-			<article>
+			<article class="stap3">
 
 				<img src="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/612741c59719f3f29dce4851_Group%20220.svg"
 					alt="Bestellings-doos icoontje">
@@ -125,29 +130,32 @@
 
 
 			</article>
-			<a href="https://www.dunkin.nl/order-now">Order Now</a>
-
+			<div class="order">
+				<a class="order-button" href="https://www.dunkin.nl/order-now">Order Now</a>
+			</div>
 		</section>
 
-		<section>
+		<section class="Blog">
 
 			<img src="https://cdn.prod.website-files.com/612741c59719f34382ce4741/65d7303401017b595410966c_Opening%20Batavia%20stad.png"
 				alt="Heropening Bataviastad 4 maart">
 			<h2>Heropening Bataviastad</h2>
 			<p>Dunkin' Bataviastad gaat weer open!</p>
-			<a href="https://www.dunkin.nl/blogpost/heropening-bataviastad">Lees meer</a>
+			<div class="lezen">
+				<a class="lezenLink" href="https://www.dunkin.nl/blogpost/heropening-bataviastad">Lees meer</a>
+			</div>
 		</section>
 
-		<section>
+		<section class="Storefinder">
 			<h2>
 				Store finder
 			</h2>
-			<a href="https://www.dunkin.nl/storefinder"><img
+			<a href="https://www.dunkin.nl/storefinder"><img class="kaart"
 					src="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/6179697758e8799b6a7b619e_Screenshot%202021-10-27%20at%204.43.21%20PM-min.png"
 					alt="Kaart van Nederland met alle Dunkin' winkels aangestipt."></a>
 			<p>Vind een Dunkin' in de buurt</p>
 
-			<a href="https://www.dunkin.nl/storefinder">find your store</a>
+			<a class="store" href="https://www.dunkin.nl/storefinder">find your store</a>
 		</section>
 	</main>
 
@@ -155,10 +163,12 @@
 	<footer>
 		<img src="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/612741c59719f30836ce4753_Webclip%20%5B256x256%5D.svg"
 			alt="Dunkin' Donuts logo.">
-		<a href="https://www.dunkin.nl/storefinder">Storefinder</a>
-		<a href="Jobs.html">Jobs</a>
-		<a href="https://www.dunkin.nl/blog">Blog</a>
-		<a href="https://www.dunkin.nl/about">Over Dunkin'</a>
+		<div class="footerNav">
+			<a href="https://www.dunkin.nl/storefinder">Storefinder</a>
+			<a href="Jobs.html">Jobs</a>
+			<a href="https://www.dunkin.nl/blog">Blog</a>
+			<a href="https://www.dunkin.nl/about">Over Dunkin'</a>
+		</div>
 	</footer>
 
 	<script defer src="scripts/script.js"></script>
