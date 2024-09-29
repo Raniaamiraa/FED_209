@@ -19,60 +19,136 @@
 	--color-text: #111;
 	--color-text2: #fff;
 	--color-text3: #aaaaaa;
+	--color-text4: #C93767;
+	--color-text5: #512d00;
 	--color-background: #fff;
 	--color-background2: #F5F5F5;
+	--color-background3: #3E352F;
+	--color-background4: #EFEFEF;
 	--color-nav-button: #F0F0F0;
 	--color-nav-line: #333333;
 	--color-first: #FF6E0D;
 	--color-second: #F20D90;
 	--color-third: #99D6E9;
 	--color-fourth: #f950ad;
-	--color-fifth:#EF4D27;
+	--color-fifth: #EF4D27;
+	--color-sixth: #C73562;
+	--color-seventh: #EF6A01;
 	--link-kleur: #0272CD;
 	--kop-tekst-font: 'Dunkin Sans';
 	--tekst-font: 'Dunkin Sans Book';
 }
 
+.darkMode {
+	--color-text: #ffffff;
+	--color-text2: #f0f0f0;
+	--color-text3: #aaaaaa;
+	--color-text4: #C93767;
+	--color-text5: #b2a199;
+	--color-background: #1a1a1a;
+	--color-background2: #333333;
+	--color-background3: #3E352F;
+	--color-background4: #2c2c2c;
+	--color-nav-button: #444444;
+	--color-nav-line: #ffffff;
+	--color-first: #FF6E0D;
+	--color-second: #F20D90;
+	--color-third: #99D6E9;
+	--color-fourth: #f950ad;
+	--color-fifth: #EF4D27;
+	--color-sixth: #C73562;
+	--color-seventh: #EF6A01;
+	--link-kleur: #4a90e2;
+}
 
-
-
+.halloweenMode {
+	--color-text: #FFFFFF;
+	--color-text2: #000000;
+	--color-text3: #aaaaaa;
+	--color-background: #2D2D2D;
+	--color-background2: #3E352F;
+	--color-background3: #FF6E0D;
+	--color-background4: #C93767;
+	--color-nav-button: #F20D90;
+	--color-nav-line: #333333;
+	--color-first: #FF6E0D;
+	--color-second: #F20D90;
+	--color-third: #99D6E9;
+	--color-fourth: #f950ad;
+	--color-fifth: #EF4D27;
+	--color-sixth: #C73562;
+	--color-seventh: #EF6A01;
+	--link-kleur: #A10000;
+}
 
 /****************/
 /* JOUW STYLING */
 /****************/
 
 /* jouw code */
-
+/* https://www.onlinewebfonts.com/download/ac415bee855b42915c6fb198747e34ac */
 @font-face {
 	font-family: 'Dunkin Sans';
 	src: url('../Fonts/Dunkin-Sans-Display.woff2') format('woff2');
 }
 
+/* https://www.onlinewebfonts.com/download/4ba6a0aa699286a040c28bf72ea53fa3 */
 @font-face {
 	font-family: 'Dunkin Sans Book';
 	src: url('../Fonts/Dunkin-Sans-Book.woff2') format('woff2');
 }
 
+@keyframes menu-animatie {
+	from {
+		transform: translateY(100%);
+	}
+
+	to {
+		transform: translateY(0%);
+	}
+}
+
+/* https://chatgpt.com/share/66f8eb97-6f90-800e-85c4-8a712f6c7051 */
+.loader {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-first);
+	color: var(--color-text);
+	text-align: center;
+	padding-top: 20%;
+	font-size: 24px;
+	z-index: 1000;
+}
+
+
+
 body {
 	font-family: 'Dunkin Sans Book';
 	overflow-x: hidden;
 	margin: 0;
+	background-color: var(--color-background);
 }
 
 
 /* Homepage */
 
-main {
-	padding-left: 1.5em;
+.mainHome {
+	padding-left: 1.3em;
 }
-
 
 .navbar {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 3em;
 	align-items: center;
+}
 
+.navbar button img {
+	width: 1.5em;
 }
 
 .logo {
@@ -85,7 +161,7 @@ main {
 
 
 .header-keur {
-
+	position: relative;
 	background-color: var(--color-first);
 	color: var(--color-text2);
 	width: 100vw;
@@ -96,6 +172,15 @@ main {
 	margin-top: 0;
 	margin-left: 0;
 	font-size: 0.9em;
+}
+
+/* https://codepen.io/shooft/pen/VwJowvJ?editors=1100 */
+header {
+	background-color: var(--color-background);
+	height: 7em;
+	position: sticky;
+	top: calc(-45.8/16 * 1rem);
+	z-index: 2;
 }
 
 .taal {
@@ -109,48 +194,69 @@ main {
 	margin-left: 2em;
 }
 
-/* chat hulp */
+/* https://chatgpt.com/share/66f8ec5f-86f4-800e-b0af-6616c40f24ab */
+/* Initiële verborgen status */
 .nav-menu {
-	display: none;
-	/* Verberg het menu standaard */
 	list-style-type: none;
-	/* Verwijder bullet points */
 	padding: 0;
-	/* Verwijder padding */
+	margin: 0;
+	display: none;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	background-color: var(--color-background);
+	animation-name: menu-animatie;
+	animation-duration: 1s;
+	font-family: var(--kop-tekst-font);
+	font-size: 2.4em;
+	text-transform: uppercase;
 }
 
+
+/* Actieve status wanneer het menu geopend is */
 .nav-menu.active {
 	display: block;
-	/* Toon het menu als het 'active' is */
+	transform: translateY(0);
+	opacity: 1;
+	height: 932vw;
 }
+
+/* Styling voor het menu als het open staat */
+.nav-menu li {
+	padding: .6em;
+	text-align: center;
+}
+
+.nav-menu li:nth-child(1) {
+	margin-top: 2em;
+}
+
+.nav-menu li a {
+	text-decoration: none;
+	color: var(--color-text5);
+}
+
 
 button[aria-label="menu"] {
 	background: var(--color-nav-button);
 	border: none;
-	cursor: pointer;
-	outline: none;
+	padding: 0.8em 2em;
 	border-radius: 30px;
-	padding-right: 2em;
-	padding-left: 2em;
-	padding-bottom: 0.8em;
-	padding-top: 0.8em;
 	width: fit-content;
 }
 
 .Home {
 	position: relative;
-	/* Zorg ervoor dat de h1 binnen deze sectie positioneert */
+	/* ^Zorgt ervoor dat de h1 binnen deze sectie positioneert */
 	width: 24em;
 	margin-top: 2.5em;
-	height: 30em
+	height: 24em
 }
 
 .Home img {
 	display: block;
 	width: 100%;
-	/* De breedte van de afbeelding */
 	height: auto;
-	/* Houdt de verhoudingen van de afbeelding */
 	border-radius: 18px;
 
 }
@@ -159,17 +265,11 @@ button[aria-label="menu"] {
 	font-family: var(--kop-tekst-font);
 	position: absolute;
 	top: 10%;
-	/* Verticaal in het midden */
 	left: 50%;
-	/* Horizontaal in het midden */
 	transform: translate(-50%, -50%);
-	/* Zorg voor exacte centrering */
 	color: var(--color-text2);
-	/* Tekstkleur voor leesbaarheid */
 	font-size: 3.5rem;
-	/* Tekstgrootte aanpassen */
-	z-index: 10;
-	/* Zorg dat de tekst boven de afbeelding ligt */
+	z-index: 1;
 	text-align: center;
 	text-transform: uppercase;
 	line-height: 1em;
@@ -207,7 +307,6 @@ button[aria-label="menu"] {
 	border-radius: 8px;
 	font-size: 1rem;
 	border: none;
-	cursor: pointer;
 	margin-bottom: 2em;
 	margin-left: 1em;
 	margin-right: 0;
@@ -220,9 +319,8 @@ button[aria-label="menu"] {
 
 .Bestel button:nth-last-of-type(1) {
 	background-color: var(--color-fourth);
-	color: white;
+	color: var(--color-background)
 }
-
 
 .Nieuw img {
 	display: block;
@@ -277,7 +375,6 @@ button[aria-label="menu"] {
 }
 
 .Bestel-online article {
-
 	border-radius: 16px;
 	background-color: var(--color-background);
 	margin: 1em;
@@ -344,8 +441,6 @@ button[aria-label="menu"] {
 	align-items: end;
 	padding: 1em;
 	width: 23em;
-
-
 }
 
 .order {
@@ -365,12 +460,11 @@ button[aria-label="menu"] {
 	width: 24em;
 	padding-top: 1em;
 	padding-bottom: 1em;
-
-
 }
 
 .Blog {
 	width: 24em;
+	margin-top: 1em;
 }
 
 .Blog img {
@@ -454,29 +548,56 @@ button[aria-label="menu"] {
 	margin-bottom: 4em;
 }
 
+.stickyOrder {
+	position: fixed;
+	bottom: 0;
+	background-color: var(--color-background);
+	width: 100%;
+	height: 6.965em;
+	z-index: 3;
+	display: flex;
+	align-items: center;
 
-footer {
+}
+
+.stickyOrder a {
+	font-family: var(--kop-tekst-font);
+	text-transform: uppercase;
 	background-color: var(--color-first);
-	position: relative; 
-	text-align: center; 
+	color: var(--color-text2);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 35px;
+	font-size: 1.1em;
+	width: 23.86em;
+	padding-top: 1.2em;
+	padding-bottom: 1.2em;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.home-footer {
+	background-color: var(--color-first);
+	position: relative;
+	text-align: center;
 	padding-top: 6em;
-	padding-bottom: 2em;
-  }
-  
-  footer img {
+	padding-bottom: 11em;
+}
+
+.home-footer img {
 	background-color: var(--color-background2);
 	box-shadow: 0px 4px 4px var(--color-nav-line);
 	border-radius: 50%;
 	width: 12em;
 	height: 12em;
-	position: absolute; 
-	top: -7em; 
-	left: 50%; 
-	transform: translateX(-50%) rotate(-20deg); 
-	z-index: 1; 
-  }
-  
-  footer a {
+	position: absolute;
+	top: -7em;
+	left: 50%;
+	transform: translateX(-50%) rotate(-20deg);
+	z-index: 1;
+}
+
+.home-footer a {
 	font-family: var(--kop-tekst-font);
 	text-transform: uppercase;
 	background-color: var(--color-fifth);
@@ -489,13 +610,472 @@ footer {
 	padding-top: 1.6em;
 	padding-bottom: 1.6em;
 	margin: .5em;
-  }
-  
-  .footerNav{
+}
+
+.footerNav {
 	display: grid;
 	place-items: center;
-  }
+}
 
+/* https://www.w3schools.com/howto/howto_css_switch.asp */
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	margin-top: 1em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-text3);
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: var(--color-background);
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider {
+	background-color: var(--color-background3);
+}
+
+input:focus+.slider {
+	box-shadow: 0 0 1px var(--color-background3);
+}
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+
+.switch2 {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	margin-top: 1em;
+}
+
+.switch2 input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-text3);
+	-webkit-transition: .4s;
+	transition: .4s;
+
+}
+
+.slider2:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: var(--color-background);
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider2 {
+	background-color: var(--color-background3);
+}
+
+input:focus+.slide2r {
+	box-shadow: 0 0 1px var(--color-background3);
+}
+
+input:checked+.slide2:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider2.round2 {
+	border-radius: 34px;
+}
+
+.slider2.round2:before {
+	border-radius: 50%;
+}
 
 
 /* Jobspage */
+main {
+	margin: 0;
+}
+
+.headerJobs {
+	height: 1em;
+	background-color: var(--color-background);
+}
+
+
+.nav-menu2 {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background-color: var(--color-background);
+	transform: translateY(100%);
+	opacity: 0;
+	transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+
+.nav-menu2.active {
+	display: block;
+	transform: translateY(0);
+	opacity: 1;
+	top: 3em;
+	color: var(--color-text);
+	width: 24em;
+	margin-left: 1em;
+	box-shadow: 1px 1px 4px var(--color-nav-line);
+}
+
+.nav-menu2.active button img {
+	content: url(https://www.svgrepo.com/show/421555/close-del.svg);
+}
+
+.nav-menu2 li {
+	padding: 1em;
+	text-align: center;
+}
+
+.nav-menu2 li a {
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+
+button[aria-label="burgermenu"] {
+	background: var(--color-background);
+	border: none;
+	padding: 0.8em 2em;
+	border-radius: 8px;
+	width: fit-content;
+}
+
+.navbar2 {
+	margin-top: 1.3em;
+	margin-left: 2em;
+
+	display: grid;
+	grid-template-columns: 2fr .5fr;
+	width: 25em;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+.navbar2 button img {
+	width: 1.5em;
+}
+
+
+.logo-foto-jobs {
+	width: 9em;
+}
+
+
+/* https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit */
+.intro {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+		url(https://careers.recruiteecdn.com/image/upload/q_auto,f_auto,w_1920,c_limit/production/images/BHi0/anMRO2VeGV6Q.png);
+	background-size: cover;
+	background-position: center;
+	width: auto;
+	margin-top: 2.5em;
+	height: 33em;
+	text-align: center;
+	align-content: center;
+	overflow: hidden;
+
+}
+
+.intro h1 {
+	position: relative;
+	font-family: var(--kop-tekst-font);
+	color: var(--color-text2);
+	z-index: 2;
+	font-size: 2.5em;
+
+}
+
+.wij h2 {
+	font-family: var(--kop-tekst-font);
+	text-transform: uppercase;
+	color: var(--color-sixth);
+	text-align: center;
+	font-size: 2.5em;
+	margin-bottom: 0;
+}
+
+.wij p {
+	font-family: var(--tekst-font);
+	text-align: center;
+	padding: 1em;
+	line-height: 1.6em;
+	font-size: 1em;
+
+}
+
+.wij a {
+	display: flex;
+	font-family: var(--tekst-font);
+	background-color: var(--color-seventh);
+	color: var(--color-text2);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+	border: .09em solid var(--color-seventh);
+	font-size: 1em;
+	width: 9.42625em;
+	padding: .5em .75em;
+	margin-left: 8.5em;
+	margin-bottom: 3em;
+
+}
+
+blockquote {
+	background-color: var(--color-background4);
+	padding: 1em 1.5em;
+	width: 24em;
+	margin-left: 1.5em;
+}
+
+blockquote h3 {
+	color: var(--color-text4);
+	font-family: var(--kop-tekst-font);
+	letter-spacing: .01rem;
+	word-spacing: .01em;
+	line-height: 1.4em;
+}
+
+.fotos {
+	display: grid;
+	grid-gap: 1.5em;
+	grid-template-columns: .1fr 2fr;
+	grid-template-rows: 1fr 1fr;
+	margin-left: 1.5em;
+	margin-top: 3em;
+	margin-bottom: 3.25em;
+}
+
+.fotos h2 {
+	display: none;
+}
+
+.fotos img:nth-last-of-type(3) {
+	width: 6.958125em;
+	height: 6.958125em;
+	object-fit: cover;
+}
+
+.fotos img:nth-last-of-type(1) {
+	width: 6.958125em;
+	height: 6.958125em;
+	object-fit: cover;
+}
+
+.fotos img:nth-last-of-type(2) {
+	width: 15.41625em;
+	height: 15.41625em;
+	object-fit: cover;
+	grid-column: 2/-1;
+	grid-row-start: 1;
+	grid-row-end: -1;
+}
+
+/* https://tympanus.net/codrops/2024/01/17/a-practical-introduction-to-scroll-driven-animations-with-css-scroll-and-view/ */
+@keyframes img-animatie {
+	0% {
+		scale: 1;
+	}
+
+	50% {
+		scale: 1.3;
+	}
+
+	100% {
+		scale: 1;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.suiker img {
+
+		animation-name: img-animatie;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+	}
+}
+
+.suiker img {
+	width: 8.2em;
+}
+
+.suiker h2 {
+	font-family: var(--kop-tekst-font);
+	color: var(--color-sixth);
+	font-size: 2em;
+	text-align: center;
+}
+
+.suiker h3 {
+	color: var(--color-sixth);
+	font-family: var(--kop-tekst-font);
+}
+
+.suiker article {
+	text-align: center;
+	padding-bottom: 2em;
+	width: 24em;
+	margin-left: 1.5em;
+	line-height: 1.5em;
+}
+
+.vacatures h2 {
+	font-family: var(--kop-tekst-font);
+	color: var(--color-sixth);
+	font-size: 1.8em;
+	margin-top: .1em;
+	margin-bottom: 0;
+	margin-left: .9em;
+}
+
+.vacatures p {
+	margin-top: 2em;
+	margin-left: 1.8em;
+	width: 24em;
+	line-height: 1.5em;
+}
+
+.vacatures a {
+	display: flex;
+	font-family: var(--tekst-font);
+	background-color: var(--color-seventh);
+	color: var(--color-text2);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+	border: .09em solid var(--color-seventh);
+	font-size: 1em;
+	width: 11.5em;
+	padding: .5em .75em;
+	margin-left: 1.8em;
+	margin-bottom: 3em;
+	margin-top: 2em;
+}
+
+.baantje {
+	border: .09em solid var(--color-nav-line);
+	border-radius: 4px;
+	width: 24em;
+	margin-left: 1.8em;
+	margin-bottom: 2em;
+	padding: .4em 1.1em;
+}
+
+.baantje h3 {
+	font-family: var(--kop-tekst-font);
+	color: var(--color-seventh);
+}
+
+.baantje ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.baantje li {
+	padding-bottom: .5em;
+	padding-left: .5em;
+}
+
+.baantje span {
+	margin-right: .9em;
+}
+
+.footer-jobs {
+	display: flex;
+	background-color: var(--color-background3);
+	height: 26.9em;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.witLogo {
+	width: 9.019375em;
+	height: max-content;
+	margin-top: 5em;
+	margin-bottom: 4em;
+}
+
+.footer-jobs a {
+	text-decoration: none;
+	color: var(--color-text2);
+	padding: .8em;
+}
+
+.footer-jobs article h2 {
+	display: none;
+}
+
+.footer-jobs article {
+	display: flex;
+	margin-top: 1em;
+}
+
+.footer-jobs svg {
+	color: var(--color-text2);
+	margin: .8em;
+}

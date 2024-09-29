@@ -8,7 +8,7 @@
 
     <title>FED Dunkin' Donuts Jobs</title>
 
-    <link href="styles/style2.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml"
         href="https://cdn.prod.website-files.com/612741c59719f395d4ce4719/612741c59719f341fdce4864_Favicon%20%5B32x32%5D.svg">
     <link href="https://db.onlinewebfonts.com/c/ac415bee855b42915c6fb198747e34ac?family=Dunkin+Sans+Display"
@@ -16,24 +16,40 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <img src="images/Logo.png" alt="Dunkin' Donuts logo.">
-            <!-- hamburger menu -->
+    <header class="headerJobs">
+        <!-- https://chatgpt.com/share/66f8e9c5-7250-800e-b322-f2dd197d0c7e -->
+        <nav aria-label="Hoofdnavigatie" class="navbar2">
+
+            <a href="#">
+                <img class="logo-foto-jobs"
+                    src="https://careers.recruiteecdn.com/image/upload/q_auto,f_auto,w_400,c_limit/production/images/BG2M/oJtcH0-oiE2U.png"
+                    alt="Dunkin' Donuts logo">
+            </a>
+
+            <button aria-label="burgermenu" aria-expanded="false">
+                <img src="https://www.svgrepo.com/show/421558/burger-menu.svg" alt="menu">
+            </button>
+
+            <ul class="nav-menu2" id="nav-menu2">
+                <li><a href="#">Vacatures</a></li>
+                <li><a href="#">Sollicitatieproces</a></li>
+                <li><a href="#">Dunkin' als werkgever</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section class="intro">
             <h1>
                 Werken bij Dunkin' Ontdek jouw mogelijkheden
             </h1>
         </section>
 
-        <section>
+        <section class="wij">
             <h2>
                 Wij zijn Dunkin'
-
             </h2>
             <p>Welkom bij Dunkin'! Wij zijn gepassioneerd over het creëren van geweldige ervaringen voor onze klanten,
                 en dat begint bij ons team. Ontdek de mogelijkheden die op jou wachten en wordt deel van onze dynamische
@@ -42,76 +58,127 @@
             <a href="https://werkenbijdunkin.store/vacatures">Bekijk vacatures</a>
         </section>
 
-        <section>
+        <!-- https://www.w3schools.com/tags/tag_blockquote.asp -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote -->
+        <blockquote>
             <h3>"Smaakvolle momenten creëren, dat is wat ik doe bij Dunkin'. Hier voelt werken als een heerlijke
                 ervaring, elke dag weer."
             </h3>
             <p>
                 Erwin, Donut Decorator
             </p>
-        </section>
+        </blockquote>
 
-        <section>
+        <section class="fotos">
+            <h2>Foto's van medewerkers</h2>
             <img src="images/guy.jpeg" alt="Jongenman die lacht">
-            <img src="images/Vrouw2.jpeg" alt="Jongedame die lacht">
             <img src="images/Vrouw3.jpeg" alt="Jongedame die lacht met een donut in haar handen">
+            <img src="images/Vrouw2.jpeg" alt="Jongedame die lacht">
         </section>
 
-        <section>
+        <section class="suiker">
             <h2>
                 De suiker op de donut
             </h2>
 
             <article>
-                <img src="images/Boeken.png" alt="">
+                <img src="images/Boeken.png" alt="Een paar boeken opgestapeld." id="suikerImage">
                 <h3>Doorontwikkelen</h3>
                 <p>Ontwikkel je via diverse trainingen, opleidingen en cursussen!</p>
             </article>
 
             <article>
-                <img src="images/Koffer.png" alt="">
+                <img src="images/Koffer.png" alt="Een koffer met een papieren vliegtuigje ervoor." id="suikerImage">
                 <h3>25 vakantiedagen</h3>
                 <p>Geniet van 25 vakantiedagen per jaar (op basis van fulltime dienstverband).</p>
             </article>
 
             <article>
-                <img src="images/Klok.png" alt="">
+                <img src="images/Klok.png" alt="Een klok met een potloodje ervoor." id="suikerImage">
                 <h3>Flexibel rooster</h3>
                 <p>Flexibiliteit om (deels) zelf je werkrooster in te vullen.</p>
             </article>
 
             <article>
-                <img src="images/geld.png" alt="">
+                <img src="images/geld.png" alt="Een formuliertje met een stapel centen ervoor." id="suikerImage">
                 <h3>Pension opbouwen</h3>
                 <p>Via horeca pension opbouw is het later ook goed geregeld voor je.</p>
             </article>
         </section>
 
-        <section>
-            <h2>Vacature in de spotlight</h2>
+        <section class="vacatures">
+            <h2> Vacature in</h2>
+            <h2>de spotlight</h2>
             <p>Bekijk onze openstaande vacatures en ontdek welke mogelijkheden er zijn om deel uit te maken van het
                 Dunkin'-team. Kom werken bij Dunkin'.</p>
-                <a href="https://werkenbijdunkin.store/vacatures">Bekijk alle vacatures</a>
+            <a href="https://werkenbijdunkin.store/vacatures">Bekijk alle vacatures</a>
         </section>
 
-        <section>
+        <section class="baantje">
             <h3>Barista Amsterdam</h3>
             <ul>
-                <li>Op locatie</li>
-                <li>Amsterdam, Noord-Holland, Nederland</li>
-                <li>€1.785 - €2.601 per maand</li>
-                <li>Stores</li>
+                <li>
+                    <svg height="20" width="20" viewBox="0 0 20 20">
+                        <path fill="currentColor"
+                            d="M4.167 17.5V2.667h11.666V17.5h-5v-3.333H9.167V17.5h-5Zm1.666-1.667H7.5V12.5h5v3.333h1.667v-11.5H5.833v11.5Zm1.667-5h1.667V9.167H7.5v1.666Zm0-3.333h1.667V5.833H7.5V7.5Zm3.333 3.333H12.5V9.167h-1.667v1.666Zm0-3.333H12.5V5.833h-1.667V7.5Z">
+                        </path>
+                    </svg>
+                    Op locatie
+                </li>
+                <li>
+                    <svg height="20" width="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4 7.95C4 4.66 6.683 2 10 2s6 2.66 6 5.95C16 12.412 10 18 10 18S4 12.412 4 7.95ZM10 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    Amsterdam, Noord-Holland, Nederland
+                </li>
+                <li>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5 4h18v12H5V4Zm9 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6M9 6a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V8a2 2 0 0 1-2-2H9ZM1 8h2v10h16v2H1V8Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <span>€1.785 - €2.601 per maand</span>
+                    <svg width="20" height="20" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#a)">
+                            <path
+                                d="M10.5 5.083a2.917 2.917 0 1 1 0 5.834 2.917 2.917 0 0 1 0-5.834ZM4.667 7.167c.466 0 .9.125 1.275.35a4.613 4.613 0 0 0 .941 3.3 2.498 2.498 0 0 1-4.716-1.15 2.5 2.5 0 0 1 2.5-2.5Zm11.666 0a2.5 2.5 0 1 1 0 5c-.966 0-1.8-.55-2.216-1.35a4.613 4.613 0 0 0 .941-3.3 2.46 2.46 0 0 1 1.275-.35Zm-11.25 8.541c0-1.725 2.425-3.125 5.417-3.125s5.417 1.4 5.417 3.125v1.459H5.083v-1.459ZM.5 17.167v-1.25c0-1.159 1.575-2.134 3.708-2.417-.491.567-.791 1.35-.791 2.208v1.459H.5Zm20 0h-2.917v-1.459c0-.858-.3-1.641-.791-2.208 2.133.283 3.708 1.258 3.708 2.417v1.25Z"
+                                fill="currentColor"></path>
+                        </g>
+                    </svg>
+                    Stores
+                </li>
             </ul>
         </section>
     </main>
 
-    <footer>
-<img src="images/WitteLogo.png" alt="Wit Dunkin' Donuts logo.">
-<a href="https://werkenbijdunkin.store/vacatures">vacatures</a>
-<a href="https://werkenbijdunkin.store/faq">Veelgestelde vragen</a>
-<a href="https://werkenbijdunkin.store/cookies">Cookies</a>
-<a href="https://werkenbijdunkin.store/contact">Contact</a>
+    <footer class="footer-jobs">
+        <img class="witLogo" src="images/WitteLogo.png" alt="Wit Dunkin' Donuts logo.">
+        <a href="https://werkenbijdunkin.store/vacatures">vacatures</a>
+        <a href="https://werkenbijdunkin.store/faq">Veelgestelde vragen</a>
+        <a href="https://werkenbijdunkin.store/cookies">Cookies</a>
+        <a href="https://werkenbijdunkin.store/contact">Contact</a>
+        <article>
+            <h2>Socials</h2>
+            <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                <path
+                    d="M24.5592 0H1.44083C1.05958 0.00283474 0.69474 0.155547 0.425143 0.425143C0.155547 0.69474 0.00283474 1.05958 0 1.44083V24.5592C0.00283474 24.9404 0.155547 25.3053 0.425143 25.5749C0.69474 25.8445 1.05958 25.9972 1.44083 26H13.8883V15.9467H10.5083V12.0142H13.8883V9.12167C13.8883 5.76333 15.9358 3.9325 18.9475 3.9325C19.955 3.9325 20.9625 3.9325 21.97 4.08417V7.58333H19.9008C18.265 7.58333 17.9508 8.36333 17.9508 9.50083V12.0033H21.8508L21.3417 15.9358H17.9508V26H24.5592C24.9404 25.9972 25.3053 25.8445 25.5749 25.5749C25.8445 25.3053 25.9972 24.9404 26 24.5592V1.44083C25.9972 1.05958 25.8445 0.69474 25.5749 0.425143C25.3053 0.155547 24.9404 0.00283474 24.5592 0Z"
+                    fill="currentColor"></path>
+            </svg>
+            <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13 0C9.46942 0 9.02633 0.0151667 7.63967 0.078C6.56151 0.0997708 5.49484 0.304167 4.485 0.6825C3.62128 1.01649 2.83688 1.52726 2.18207 2.18207C1.52726 2.83688 1.01649 3.62128 0.6825 4.485C0.304047 5.49518 0.0996487 6.56222 0.078 7.64075C0.0151667 9.02742 0 9.46833 0 13C0 16.5317 0.0151667 16.9737 0.078 18.3603C0.0997708 19.4385 0.304167 20.5052 0.6825 21.515C1.01649 22.3787 1.52726 23.1631 2.18207 23.8179C2.83688 24.4727 3.62128 24.9835 4.485 25.3175C5.49518 25.696 6.56222 25.9004 7.64075 25.922C9.02742 25.9848 9.46942 26 13 26C16.5306 26 16.9737 25.9848 18.3603 25.922C19.4389 25.9004 20.5059 25.696 21.5161 25.3175C22.3798 24.9835 23.1642 24.4727 23.819 23.8179C24.4738 23.1631 24.9846 22.3787 25.3186 21.515C25.6967 20.5048 25.9007 19.4377 25.922 18.3593C25.9848 16.9726 26 16.5317 26 13C26 9.46833 25.9848 9.02633 25.922 7.63967C25.9002 6.56151 25.6958 5.49484 25.3175 4.485C24.9835 3.62128 24.4727 2.83688 23.8179 2.18207C23.1631 1.52726 22.3787 1.01649 21.515 0.6825C20.5048 0.304416 19.4377 0.100385 18.3593 0.0790833C16.9726 0.0140833 16.5317 0 13 0ZM19.9398 7.62022C20.8014 7.62022 21.4998 6.92179 21.4998 6.06022C21.4998 5.19866 20.8014 4.50022 19.9398 4.50022C19.0783 4.50022 18.3798 5.19866 18.3798 6.06022C18.3798 6.92179 19.0783 7.62022 19.9398 7.62022ZM9.29129 7.44954C10.3891 6.71602 11.6797 6.32451 13 6.32451C14.7705 6.32451 16.4684 7.02782 17.7203 8.27972C18.9722 9.53162 19.6755 11.2296 19.6755 13C19.6755 14.3203 19.284 15.6109 18.5505 16.7087C17.817 17.8065 16.7744 18.6621 15.5546 19.1674C14.3348 19.6726 12.9926 19.8048 11.6977 19.5472C10.4028 19.2897 9.21329 18.6539 8.27971 17.7203C7.34612 16.7867 6.71034 15.5973 6.45277 14.3023C6.19519 13.0074 6.32739 11.6652 6.83264 10.4454C7.3379 9.22562 8.19351 8.18305 9.29129 7.44954ZM10.5925 16.603C11.3051 17.0792 12.1429 17.3333 13 17.3333C14.1493 17.3333 15.2515 16.8768 16.0641 16.0641C16.8768 15.2515 17.3333 14.1493 17.3333 13C17.3333 12.143 17.0792 11.3052 16.603 10.5925C16.1269 9.87993 15.4501 9.32452 14.6583 8.99654C13.8665 8.66856 12.9952 8.58274 12.1546 8.74994C11.314 8.91715 10.5419 9.32986 9.93587 9.93588C9.32984 10.5419 8.91713 11.314 8.74993 12.1546C8.58273 12.9952 8.66854 13.8665 8.99652 14.6583C9.3245 15.4501 9.87992 16.1269 10.5925 16.603Z"
+                    fill="currentColor"></path>
+            </svg>
+            <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path
+                    d="M23.0408 6.38667C23.0408 6.38667 23.8214 7.16444 23.0408 6.38667C21.9945 5.17275 21.4179 3.61378 21.4184 2H16.6888V21.2889C16.6523 22.3327 16.2187 23.3214 15.4792 24.0468C14.7398 24.7722 13.7522 25.1776 12.7245 25.1778C10.551 25.1778 8.7449 23.3733 8.7449 21.1333C8.7449 18.4578 11.2857 16.4511 13.9031 17.2756V12.36C8.62245 11.6444 4 15.8133 4 21.1333C4 26.3133 8.22449 30 12.7092 30C17.5153 30 21.4184 26.0333 21.4184 21.1333V11.3489C23.3362 12.7487 25.6388 13.4997 28 13.4956V8.68889C28 8.68889 25.1224 8.82889 23.0408 6.38667Z"
+                    fill="currentColor"></path>
+            </svg>
+        </article>
     </footer>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
