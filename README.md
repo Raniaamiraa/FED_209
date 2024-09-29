@@ -56,11 +56,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen  
-   <img src="readme-images/test1/IMG_1496.JPG" width="375px" alt="Toegankelijkheidstest 1/2">   
-   <img src="readme-images/test1/IMG_1497.JPG" width="375px" alt="Toegankelijkheidstest 1/2">   
-   <img src="readme-images/test1/IMG_1500.JPG" width="375px" alt="Toegankelijkheidstest 1/2"> 
-   <img src="readme-images/test1/IMG_1501.JPG" width="375px" alt="Toegankelijkheidstest 1/2"> 
-   <img src="readme-images/test1/IMG_1502.JPG" width="375px" alt="Toegankelijkheidstest 1/2">
+   <img src="readme-images2/IMG_1496.png" width="375px" alt="Toegankelijkheidstest 1/2">   
+   <img src="readme-images2/IMG_1497.png" width="375px" alt="Toegankelijkheidstest 1/2">   
+   <img src="readme-images2/IMG_1500.png" width="375px" alt="Toegankelijkheidstest 1/2"> 
+   <img src="readme-images2/IMG_1501.png" width="375px" alt="Toegankelijkheidstest 1/2"> 
+   <img src="readme-images2/IMG_1502.png" width="375px" alt="Toegankelijkheidstest 1/2">
   Lijst met je bevindingen die in de test naar voren kwamen:
  Over het algemeen ziet de website er goed uit, maar er zaten wel een paar errors in de HTML.
  Met de screenreader las het niet alles voor hoe het bedoelt was.
@@ -139,11 +139,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  <img src="readme-images/test2/IMG_1503.JPG" width="375px" alt="Toegankelijkheidstest 1/2">   
-   <img src="readme-images/test2/IMG_1504.JPG" width="375px" alt="Toegankelijkheidstest 1/2">   
-   <img src="readme-images/test2/IMG_1505.JPG" width="375px" alt="Toegankelijkheidstest 1/2">   
-   <img src="readme-images/test2/IMG_1506.JPG" width="375px" alt="Toegankelijkheidstest 1/2">   
-   <img src="readme-images/test2/IMG_1507.JPG" width="375px" alt="Toegankelijkheidstest 1/2"> 
+  <img src="readme-images3/IMG_1503.png" width="375px" alt="Toegankelijkheidstest 1/2">   
+   <img src="readme-images3/IMG_1504.png" width="375px" alt="Toegankelijkheidstest 1/2">   
+   <img src="readme-images3/IMG_1505.png" width="375px" alt="Toegankelijkheidstest 1/2">   
+   <img src="readme-images3/IMG_1506.png" width="375px" alt="Toegankelijkheidstest 1/2">   
+   <img src="readme-images3/IMG_1507.png" width="375px" alt="Toegankelijkheidstest 1/2"> 
  
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
   Over het algemeen ziet de website er goed uit, al zeg ik het zelf XD.
