@@ -1,5 +1,6 @@
 # Instructie
-Open het inspectmenu in Google Chrome en kies voor de dimensies "iPhone 14 Pro Max". Zo zie je de juiste uitwerking
+Open het inspectmenu in Google Chrome en kies voor de dimensies "iPhone 14 Pro Max". Zo zie je de juiste uitwerking.
+De door mij gemaakte pagina's zijn de home-pagina en de jobs-pagina.
 
 # Procesverslag
 Markdown is een simpele manier om HTML te schrijven.  
